@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Amanda Barbosa</title>
+
+    <link rel="stylesheet" href="dist/css/lightbox.min.css">
+
+    <link rel="stylesheet" href="pagina_inicial (2).css">
+
+   
+
+
+
+</head>
+<body>
+    <header>
+        <div id="container">
+
+        <h1 class="logo">
+            <img src="imagens/logo_ab_Prancheta 1.png" alt="logo Ab Amanda Barbosa- Designer Gráfico">
+        </h1>
+
+        <nav class="links">
+            <a href="#sobre">Sobre</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+    </div>
+
+    </header>
+
+    <main>
+        <article id="sobre">
+
+            <h2>Sobre</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quas delectus porro. Illum minima consequuntur amet placeat autem debitis quae hic deleniti, optio voluptas recusandae. Rerum nam eos error consequuntur!
+            </p>
+
+        </article>
+    
+    
+    <article id="projetos">
+        <div class="grupo">
+            
+            <figure>
+
+                <a href="imagens/oculos.png" data-lightbox="roadtrip"> <img src="imagens/oculos.png" alt=""> </a>
+                <a href="imagens/oculos_img_grd.png" data-lightbox="roadtrip"></a>
+
+            <figcaption>Projeto - Ocus Femme</figcaption>
+            </figure>
+
+            <figure>
+                <a href="imagens/doce_varanda.png" data-lightbox="roadtrip"> <img src="imagens/doce_varanda.png" alt=""> </a>
+                <a href="imagens/doce_varanda_img_grande.png" data-lightbox="roadtrip"></a>
+                <figcaption>Projeto - Doce Varanda</figcaption>
+            </figure>
+
+            <figure>
+                <a href="imagens/livro.png" data-lightbox="roadtrip"> <img src="imagens/livro.png" alt=""> </a>
+                <a href="imagens/livro_img_grd.png" data-lightbox="roadtrip"></a>
+                    <figcaption>Projeto - Sensacionalismo na Tv</figcaption>
+            </figure>
+
+            <figure>
+                <a href="imagens/logos_tech.png" data-lightbox="roadtrip"> <img src="imagens/logos_tech.png" alt=""> </a>
+                <a href="imagens/logos_tech_img_grd.png" data-lightbox="roadtrip"></a>
+                    <figcaption>Projeto - Logos Technology</figcaption>
+            </figure>
+
+            <figure>
+                <a href="imagens/intera.png" data-lightbox="roadtrip"> <img src="imagens/intera.png" alt=""> </a>
+                <a href="imagens/inter_img_grande.png" data-lightbox="roadtrip"></a>
+                    <figcaption>Projeto - Infografico Intera</figcaption>
+            </figure>
+
+            <figure>
+                <a href="imagens/melzinho.png" data-lightbox="roadtrip"> <img src="imagens/melzinho.png" alt=""> </a>
+                <a href="imagens/melzinho_img_grd.png" data-lightbox="roadtrip"></a>
+                    <figcaption>Projeto - Caixa Apisland </figcaption>
+            </figure>
+
+        </div>
+        </article> 
+
+        <section id="contato">
+
+            <h2>Contato</h2> 
+
+        <form action="https://formspree.io/f/xgerpgpv" method="post" id="my-form"></form>
+
+        <p>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" required>
+        </p> 
+
+        <p>
+                <label for="email">E-mail:</label>
+            <input type="email" name="email" id="email">
+        </p>
+   
+
+        <p>
+                <label for="assunto">Assunto:</label>
+                <input type="text" name="assunto" id="assunto">
+            </p>
+
+        <p>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" name="telefone" id="telefone">
+            </p>
+
+            <p>
+                <label for="mensagem">Mensagem:</label> 
+                <textarea name="mensagem" id="mensagem" cols="30" rows="6"></textarea>
+            </p>
+
+        <button 
+        type="submit" id="my-form-button" name="enviar">Enviar
+        </button>
+
+        <p id="my-form-status"></p>
+
+   </form>
+
+       </section>
+
+       </article>
+
+    </main>
+
+    <footer>
+
+    <div id="rodape">
+
+        <p>Desenvolvido por <b>Amanda, Bruno e Luiz</b> &copy; 2021</p>
+
+    </div>
+
+    </footer>
+
+</body>
+
+<script src="dist/js/lightbox-plus-jquery.min.js"></script>
+
+<script>
+    var form = document.getElementById("my-form");
+        
+    async function handleSubmit(event) {
+        event.preventDefault();
+        var status = document.getElementById("my-form-status");
+        var data = new FormData(event.target);
+        fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            status.innerHTML = "Sua mensagem foi enviada com sucesso! Aguarde o contato";
+            form.reset()
+        }).catch(error => {
+            status.innerHTML = "Oops! tente novamente mais tarde"
+        });
+        }
+        form.addEventListener("submit", handleSubmit)
+</script>
+
+
+</html>

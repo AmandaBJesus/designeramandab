@@ -1,0 +1,140 @@
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap');
+
+    *, *::after,*::before {box-sizing: border-box;}
+
+    html {
+        font-size: 18px;
+        scroll-behavior: smooth ;
+    }
+
+    body {
+        background-image: url(imagens/fundo.png);
+        background-attachment: fixed;
+      
+        font-family: 'Raleway', sans-serif;
+    }
+
+    img {max-width: 100%;}
+
+    body, h1,h2,h3, p {
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    header, footer #rodape {
+        background-color: #dbc07aa9;
+        margin: 0px; 
+        padding: 20px; 
+        }
+
+    header {
+            border-bottom: solid rgb(160, 142, 108) 4px;
+            margin-bottom: 8px;
+        }
+
+    footer {border-top: solid rgb(160, 142, 108) 4px;}
+
+    main {
+        width: 95%;
+        margin: auto; 
+        }
+
+    article, section{
+            background-color: white;
+            box-shadow: rgba(112, 99, 76, 0.5) 1px 2px 5px;
+            margin-bottom: 8px;
+            padding: 8px;
+            text-align: center;            
+        }
+
+    h1, nav, nav a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    h1 { padding: 4px 0;
+        font-size: 24px;
+    }
+    
+    h1 img { width: 220px;}
+    
+    nav a  {
+        height: 50px;
+        font-size: 20px;
+        font-weight: bold;
+        width: 100%;
+    }
+    
+    nav a:hover, nav a:focus {
+        background-color: #592D1C;
+        color: #F4EED5;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    input, textarea {
+        border: solid #592D1C 2px;
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    label {
+        display: block;
+        font-size: 15px;
+        text-align: left; 
+    }
+
+    button {
+        border: none;
+        background-color: #592D1C;
+        color: white;
+        font-weight: bold;
+        padding: 8px;
+    }
+
+    button:hover, button:focus {
+        background-color:#dbc07ac9;
+        cursor: pointer; }
+
+    figcaption {
+            text-align: center;
+            font-weight: bold; 
+            font-size: 16px;
+            
+    }
+    
+    @media screen and (max-width: 500px) {
+    
+        figcaption {font-size: 0.7em;}
+                
+        .logo {         
+            max-width: 35%;
+            margin: auto;           
+        }
+         
+        h2 {font-size: 0.9rem;}
+         
+        p {font-size: 0.7rem;}
+         
+        nav a {font-size: 0.8rem;}    
+        }
+
+   
+ 
+    
+
+      
